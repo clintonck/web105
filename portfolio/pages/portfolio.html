@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script&family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+    <title>Resume</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+           <h1>Clinton Keller</h1>
+           <nav class= "top">
+                <ul class="nav-center">
+                    <li class="horizontal-menu"><a href="../index.html">Home</a></li>
+                    <li class="horizontal-menu"><a href="resume.html">Resume</a></li>
+                    <li class="horizontal-menu"><a href="portfolio.html">Portfolio</a></li>
+                </ul>  
+            </nav>
+        </header>
+
+        <h2>Portfolio</h2>
+        <div id="slideshow">
+            <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img id="slides-img" src="../images/laptop.jpg" style="width:100%">
+                <div class="text">Programming and Web</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img id="slides-img" src="../images/headphones.jpg" style="width:100%">
+                <div class="text">Music Production</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img id="slides-img" src="../images/graphic-design.jpg" style="width:100%">
+                <div class="text">Graphic Design</div>
+                </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+            <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+        </div>
+        <main>
+        
+        <h5>Programming and Web</h5>
+        <p id="portfolio-p">I have been writing code for the purpose of improving business practices
+            and creating entertainment in C++ and Python programming languages. 
+            I also develop mobile applications with Java using Android Studio. I am in the 
+            process of making apps to release on Google Play! I can also provide basic web designs
+            using PHP, HTML, CSS, JavaScript, and MySQL.</p>
+        <img src="../images/hello-world.png" alt="Hello World">
+        
+        <h5>Music Production</h5>
+        <p id="portfolio-p2">I compose and produce music using Reason Studios. If you have any requests, I can probably make you a track!</p>
+        <p id="portfolio-p3">Here is a sample track.</p>
+        <div>
+        <audio controls>
+            <source src="../practice.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        </div>
+        
+        <h5>Graphic Design</h5>
+        <div>
+        <p id="portfolio-p"> I am not just a coder, but an artist! I create logos and images. I also apply effects
+            and filters to make awesome-looking graphics using Adobe Creative Suite! 
+            Programs I commonly use are Adobe Photoshop, Lightroom, and Illustrator.</p>
+        <img id="graphic-img" src="../images/abstract-clinton.png" alt="abstract">
+        </div>
+
+    </main>
+        <footer>
+            <p>&copy; Clinton Keller 2021</p>
+        </footer>
+    </div>
+</body>
+</html>

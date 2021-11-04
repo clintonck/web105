@@ -1,0 +1,483 @@
+/*---- CSS RESET ----*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------- LAYOUT ---------------------*/
+
+/*
+font-family: 'Dancing Script', cursive;
+font-family: 'DM Serif Display', serif;
+font-family: 'Nunito Sans', sans-serif;
+*/
+
+ Color Theme Swatches in RGBA 
+.color-theme_PSX_20211028_151610-1-rgba { color: rgb(220 152 91); }
+.color-theme_PSX_20211028_151610-2-rgba { color: rgba(217, 168, 126, 1); }
+.color-theme_PSX_20211028_151610-3-rgba { color: rgba(140, 72, 32, 1); }
+.color-theme_PSX_20211028_151610-4-rgba { color: rgba(38, 8, 1, 1); }
+.color-theme_PSX_20211028_151610-5-rgba { color: rgba(160, 62, 51, 1); }
+
+
+:root{
+    --dark-primary-color:  rgba(160, 62, 51, 1);
+    --light-primary-color: rgba(140, 72, 32, 1);
+    --primary-color: rgba(38, 8, 1, 1);
+    --primary-border-color:  rgb(220 152 91);
+    --text-icons: #FFFFFF;
+    --accent-color: rgba(217, 168, 126, 1);
+    --primary-text: rgba(38, 8, 1, 1); 
+    --secondary-text: #757575;
+    --divider-color: #b4b7d1;
+    --heading-font: 'DM Serif Display', serif;
+    --text-font:'Nunito Sans', sans-serif;
+    --secondary-text-font:'Dancing Script', cursive;
+    --primary-padding: 10px;
+    --primary-line-height: 2;
+    --secondary-line-height: 1.5;
+    --primary-font-size: 1.1em;
+    --misc-color: black;
+    --primary-text-shadow: 1px 1px 5px rgba(38, 8, 1, 1);
+    --secondary-text-shadow: 1px 1px 1px rgba(38, 8, 1, 1);
+}
+
+
+#cursive{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8em;
+    padding: 5px 0px 0px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, hr{ 
+    color: var(--primary-text);
+    font-family: var(--heading-font);
+    font-size: 2em; 
+} 
+
+h1{
+	text-align: center;
+	display:block;
+	padding: 25px;
+	font-size: 2.4em;
+    color: white;
+    text-shadow: var(--primary-text-shadow);
+}
+
+h2{
+	text-align: center;
+	display:block;
+	padding: 20px;
+	margin: 30px 0 20px;
+    color: black;
+    border: 1px solid black;
+}
+
+h3, h4{
+    /*background-color: var(--accent-color);*/
+    height: 40px;
+    display: inline;
+    /*text-shadow: var(--secondary-text-shadow);*/
+}
+
+h3{
+	width: 49%;
+	margin: 25px 0 0px;
+    color: var(--light-primary-color);
+    font-family: 'Bitter', serif;
+    font-size: 1.2em; 
+    display: inline;
+    float: left;
+    clear: both;
+    text-align: center;
+    padding: 5px;
+}
+
+h4{
+    color: var(--light-primary-color);
+    font-family: 'Bitter', serif;
+    font-size: 2.2em; 
+    width: 51%;
+    float: right;
+    padding: 10px 10px 45px;
+    margin: 5px 0px 10px 0px;
+    border: 1px solid black;
+}
+
+h5{
+	margin: 30px 0 10px;
+    color: var(--light-primary-color);
+    font-family: 'Bitter', serif;
+    font-size: 2em; 
+    border: 1px solid black;
+    display:block;
+    text-align: center;
+    padding: 10px;
+}
+
+header{
+    color: var(--dark-primary-color);
+    background: var(--dark-primary-color);
+    padding: 10px;
+}
+
+
+#bio-paragraph{ 
+    color:black; 
+    line-height: 2.2; 
+    padding: 5px 10px 0px 0px; 
+    float: right;
+    width: 51%;
+    font-size: 1.5em;
+} 
+
+p{
+    color:black; 
+    line-height: 2; 
+    padding: 10px 10px; 
+    font-size: 1.1em;
+}
+
+#portfolio-p{
+    color:black; 
+    line-height: 2; 
+    padding: 5px 10px 15px; 
+    display: block;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+#portfolio-p2{
+    color:black; 
+    line-height: 2; 
+    padding: 5px 10px 5px; 
+    display: block;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+#portfolio-p3{
+    color:black; 
+    line-height: 2; 
+    padding: 5px 10px 15px; 
+    display: block;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+
+
+#graphic-img{
+	max-width:100%;
+}
+
+body{ 
+    background-color: #6a6a6a; 
+    font-family: 'Raleway', sans-serif; 
+    box-sizing: border-box;
+    background:black;
+} 
+
+.container{ 
+    background: white;
+    width: 90%; 
+    max-width: 1280px; 
+    margin: 0px auto;   
+    font-size: 1em;
+    box-sizing: border-box;
+
+} 
+
+audio{
+	border: 3px solid rgb(222 179 142);
+	border-radius: 100px;
+	width: 800px;
+	display:block;
+	margin: 0 auto;
+}
+
+figure{
+	border: 2px solid black;
+	box-sizing: border-box;
+	padding: 2px 2px 0px 2px;
+    float: left;
+    margin: 1px 10px;
+    display: inline;
+    clear: both;
+    width: 43%; 
+}
+
+img{ 
+    background: rgb(187 46 46);
+    width: 100%;
+}
+
+#bio-img{
+    float: left;
+}
+
+figcaption{
+  background-color: black;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  width: 80%;
+  line-height: 2;
+  padding: 0;
+  margin: 0;
+}
+
+main{
+    box-sizing: border-box;
+	padding: 0px 30px; 
+}
+
+
+footer{
+    text-align: center;
+    clear: both;
+    padding: 25px;
+}
+
+
+.top{
+    position: relative;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0px;
+}
+
+.horizontal-menu{
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+.horizontal-menu a{
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 40px 5px 40px;
+    margin-left: 20px;
+    color: rgb(255 255 255);
+    background: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.horizontal-menu a:hover{
+    color: var(--primary-color);
+    background: white;
+}
+
+
+ul li{
+    margin: 10px 20px 10px;
+    padding: 10px;
+    list-style-type: square;
+}
+
+ol li{
+    padding: 10px 0 12px;
+    text-align: left;
+    color: purple;
+}
+
+dl{
+    font-size: x-large;
+}
+
+dl dt{
+    font-size: 26px;
+    color: rgb(40, 76, 106);
+    margin: 10px 20px;
+}
+
+dl dd{
+    color: black;
+    margin: 10px 30px;
+}
+
+/*----------------------------------- Slideshow -------------------------------------*/
+/*
+font-family: 'Dancing Script', cursive;
+font-family: 'DM Serif Display', serif;
+font-family: 'Nunito Sans', sans-serif;
+*/
+
+ Color Theme Swatches in RGBA 
+.color-theme_PSX_20211028_151610-1-rgba { color: rgba(191, 124, 65, 1); }
+.color-theme_PSX_20211028_151610-2-rgba { color: rgba(217, 168, 126, 1); }
+.color-theme_PSX_20211028_151610-3-rgba { color: rgba(115 5 5); }
+.color-theme_PSX_20211028_151610-4-rgba { color: rgba(38, 8, 1, 1); }
+.color-theme_PSX_20211028_151610-5-rgba { color: rgba(160, 62, 51, 1); }
+
+#slideshow{
+	background: rgba(8, 37, 8); 
+    margin: 10px auto 70px;
+    width: 50%;
+    display: block;
+    border: 1px solid rgba(8, 37, 8); 
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 4px #e2d0ff;
+}
+
+.mySlides {display: none}
+
+#slides-img {
+	box-shadow: 1px 1px 5px 2px #5b5858;
+	border-radius: 20px;
+	vertical-align: middle;
+	}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  background-color: rgb(8, 37, 8); 
+  border: 3px solid #5b5858;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin: -120px;
+  width: auto;
+  padding: 30px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 5px 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgb(203 75 75 / 80%);
+}
+
+/* Caption text */
+.text {
+  color: #ffffff;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 0 10px -70px;
+  top: -100px;
+  background-color: rgb(160, 62, 51, 1);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: rgb(115 5 5);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+/* Remember box-sizing: border-box; */
